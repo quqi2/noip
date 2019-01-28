@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
-    int f=0;
+    long long int f=0;
     double c=0;
     cin>>f;
     c=5*(f-32)/9;
