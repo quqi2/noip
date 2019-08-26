@@ -7,12 +7,11 @@
 graph LR
 有问题-->issues
 
-```
 
-```
+
+
 graph LR
 看说明-->wiki
-```
 ---
 **此代码仅供学习参考，请勿抄袭！现在joyoj,luogu反作弊极为强大！:tiger:**
 题目来自joyoj.org/luogu.org
