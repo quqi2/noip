@@ -2,18 +2,17 @@
 using namespace std;
 int main(){
     string s="BBC ABCDAB ABCDABCDABDE",p="ABCDABD";
-    int index=0;
-    for(int i=0;i<s.length();i++){
-        for(int j=0;j<p.length();j++){
-           if(s[index]==p[1]){
-               /*继续匹配*/
-            } 
-            else
-            {
-                break;
-            }
-            
+    int index=0,index2=0;
+    for(int i=0;i<s.size()-p.size();i++){
+        while(index<p.size()&&s[i+index]==p[index]){
+            index++;
         }
-        index++;
+        if(s.size()==p.size()){
+            cout<<i<<endl;
+            return 0;
+        }
+
     }
+    cout<<"not found"<<endl;
+    return 0;
 }
