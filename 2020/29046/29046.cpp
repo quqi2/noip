@@ -14,7 +14,7 @@ string uptolower(string word){
 }
 int main(){
     // string tmp="Hello";
-    // cout<<uptolower(tmp)<<endl;
+    // cout<<uptolower(tmp)<<endl;i
     // return 0;
    string word,words,uplword,tmp;
     int count=0;
