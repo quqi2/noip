@@ -1,18 +1,21 @@
 #include<bits/stdc++.h>
 using namespace std;
-int main(){
-    string s="BBC ABCDAB ABCDABCDABDE",p="ABCDABD";
-    int index=0,index2=0;
-    for(int i=0;i<s.size()-p.size();i++){
-        while(index<p.size()&&s[i+index]==p[index]){
-            index++;
+int bf(string inputtext,string inputkeyword){
+    int sizet=inputtext.size(),sizek=inputkeyword.size();
+    
+    for(int i=0;i<sizet;i++){
+        int j;
+        for(j=0;j<sizek;j++){
+            if(inputtext[i+j]!=inputkeyword[j]) break;
         }
-        if(s.size()==p.size()){
-            cout<<i<<endl;
-            return 0;
+        if(j==sizek){
+            return i;
         }
-
     }
-    cout<<"not found"<<endl;
+    return -1;
+}
+int main(){
+    string text="BBC ABCDAB ABCDABCDABDE",pattern="ABCDABD";
+    cout<<bf(text,pattern);
     return 0;
 }

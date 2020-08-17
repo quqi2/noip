@@ -1,0 +1,30 @@
+start i=0 j=0
+
+=============================
+
+for:i=1 j=1 
+if=false
+break=false
+j==sizek=false
+return1=false
+
+for:i=1 j=2 
+if=true
+break=true
+j==sizek=false
+return1=false
+
+for:i=2 j=0 
+if=true
+break=true
+j==sizek=
+
+for:i=3 j=0 
+if=true
+break=true
+j==sizek=
+
+for:i=4 j=0 
+if=
+break=
+j==sizek=
