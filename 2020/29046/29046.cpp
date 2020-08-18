@@ -1,43 +1,27 @@
 #include<bits/stdc++.h>
 using namespace std;
-int c=0;
-string uptolower(string word){
-   // cout<<word<<endl;
-    while(word[c]!='\0'){
-        if(int(word[c])>'A'&&int(word[c])<'Z'){
-            word[c]=char((word[c]+32));
-
+int findfirst(string text,string keyword){
+    int sizet=text.size(),sizek= keyword.size();
+    for(int i=0;i<sizet;i++){
+        int j;
+        for(j=0;j<sizek;j++){
+            if((text[i+j]- keyword[j])%32!=0){
+                break;
+            }
         }
-        c++;
+        if(j==sizek){
+            if(text[i-1]!=' '&&text[i+1]) break;
+            return i;
+        }
     }
-    return word;
-}
+    return -1;
+} 
 int main(){
-    // string tmp="Hello";
-    // cout<<uptolower(tmp)<<endl;i
-    // return 0;
-   string word,words,uplword,tmp;
-    int count=0;
-    cin>>word;
-    //getline(cin,words); 
-    uplword=uptolower(word);
-    //cout<<uplword<<endl;
-    while(cin>>words){
-        cout<<words<<endl;
-        tmp=uptolower(words);
-        cout<<tmp<<endl;
-        // cout<<uptolower(words)<<" "<<uplword<<endl;
-        if(uptolower(words)==uplword){
-            count++;
-        }
-    }
-    if(count==0){
-        cout<<"-1"<<endl;
-        return 0;
-    }
-    else{
-        cout<<count<<endl;
-        return 0;
-    }
-
+    freopen("29046.in","r",stdin);
+    freopen("29046.out","w",stdout);
+    string text,pattern;
+    getline(cin,pattern);
+    getline(cin,text);
+    cout<<findfirst(text,pattern);
+    return 0;
 }
