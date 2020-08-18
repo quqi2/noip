@@ -4,3 +4,5 @@
 *.out
 /.vscode/
 /2020/29041/testcase/
+*.json
+
